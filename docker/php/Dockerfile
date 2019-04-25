@@ -1,4 +1,4 @@
-FROM php:5.6-fpm-alpine
+FROM php:7.1-fpm-alpine
 
 RUN apk add --update make libzip-dev zip
 
