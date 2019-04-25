@@ -64,4 +64,21 @@ class User
     private $deletedAt;
 
 
+    /**
+     * @param string $name
+     * @return void
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @param string $email
+     * @return void
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
 }
