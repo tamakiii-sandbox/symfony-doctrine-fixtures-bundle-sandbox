@@ -1,4 +1,4 @@
-# symfony27-doctrine-fixtures-bundle-sandbox
+# symfony-doctrine-fixtures-bundle-sandbox
 
 ~~~sh
 docker-compose up --build
