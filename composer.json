@@ -1,4 +1,6 @@
 {
     "name": "tamakiii-sandbox/symfony27-doctrine-fixtures-bundle-sandbox",
-    "require": {}
+    "require": {
+        "symfony/symfony": "2.7"
+    }
 }
