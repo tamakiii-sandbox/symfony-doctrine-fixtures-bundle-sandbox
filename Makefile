@@ -1,0 +1,4 @@
+
+init:
+	composer.phar init
+
