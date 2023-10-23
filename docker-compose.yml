@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  php:
+    build: ./docker/php
+    working_dir: /work/app
+    volumes:
+      - .:/work
+
+  nginx:
+    build: ./docker/nginx
+    working_dir: /work
+    ports:
+      - ${HOST_PORT_HTTP:-8080}:80
+    volumes:
+      - .:/work
+
+  mysql:
+    image: mysql:5.5
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: symfony
+      MYSQL_USER: symfony
+      MYSQL_PASSWORD: pass
+    volumes:
+      - mysql:/var/lib/mysql
+      - ./docker/mysql/etc/mysql/conf.d/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+
+volumes:
+  mysql:
+    driver: local
